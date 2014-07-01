@@ -2,30 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0621658-cfb6-449f-af60-781dc7b275db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Add User name to list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Caching JSON data in a service.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dependency injection syntax for minification.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Directives.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Email Validatin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Factory With RoutProvider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Factory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GetData.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JSON with Factory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JSON-data handling.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ModelDemo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RoutProvier.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RoutProvierWithURL.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sorting table columns interactively.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WelcomePage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aboutPage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JS/angular-route.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JS/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controler.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/createModule.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/init-repeat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing.html" afterPath="$PROJECT_DIR$/testing.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testproject.iws" />
@@ -88,6 +64,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -158,6 +139,7 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -231,7 +213,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24972737" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33056995" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
