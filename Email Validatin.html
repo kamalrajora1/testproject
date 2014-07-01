@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Email Validation</title>
+    <style>
+        input.ng-invalid{border: 2px solid red}
+    </style>
+</head>
+<body>
+    <form name="frm">
+        <div>
+            Enter Email address : <input type="email" ng-model="user.email" required>
+            <span ng-show="frm.email.$invalid" >Required!</span>
+        </div>
+    </form>
+</body>
+<script type="text/javascript" src="JS/angular.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</html>

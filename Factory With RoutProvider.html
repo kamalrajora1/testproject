@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <H1> load data using Factory in routeProvider</H1>
+    <table>
+        <tr>
+            <Th><a href="#/home">Home</a></Th>
+            <th><a href="#/about">About</a> </th>
+        </tr>
+    </table>
+    <div ng-view=""> Hiiiii</div>
+</body>
+<script type="text/javascript" src="JS/angular.min.js"></script>
+<script type="text/javascript" src="JS/angular-route.min.js"></script>
+<script type="text/javascript">
+    var demoApp = angular.module('demoApp', ['ngRoute']);
+    demoApp.config(function($routeProvider){
+       $routeProvider
+               .when('/home',{
+                        templateUrl : 'WelcomePage.html',
+                        controller : 'SimpleController'}
+                 )
+               .when('/about', {
+                        templateUrl : 'aboutPage.html',
+                        controller : 'aboutController'
+               })
+               .otherwise({
+                        template : '<H1>defoult page...</H1>'
+               });
+    });
+    demoApp.factory('SimpleFactory', function($http){
+        return {
+            dataList : function(callback){
+                $http.get('GetData.json').success(callback);
+            }
+        };
+    });
+    demoApp.controller('SimpleController', function($scope, $http, SimpleFactory){
+        SimpleFactory.dataList(function(SimpleFactory){
+            $scope.list = SimpleFactory;
+        })
+    });
+    function aboutController($scope){
+        $scope.about = 'Name : Kamal, ID : 204';
+    }
+</script>
+</html>

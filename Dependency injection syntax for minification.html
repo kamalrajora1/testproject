@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dependency injection syntax for minification</title>
+</head>
+<body>
+    <div ng-controller="SimpleController">
+        <H1>This example based on dependency injection syntax for minification</H1>
+        <br>
+        Name:<input type="text" ng-model="name"><br>
+        <input type="button" ng-click="addName()" value="Add">
+        <ul>
+            <li ng-repeat="obj in names">
+                {{obj}}
+                <a href="" ng-click="remove(obj)">remove</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="JS/angular.min.js"></script>
+<script type="text/javascript">
+    var demoApp = angular.module("demoApp", []);
+    demoApp.controller("SimpleController", ['$scope',  function(scope){
+        scope.names = ['Larry', 'Curly', 'Moe'];
+        scope.addName = function(){
+            scope.names.push(scope.name);
+            scope.name = '';
+        };
+        scope.remove = function(name){
+            var i = $scope.names.indexOf(name);
+            scope.names.splice(i, 1);
+        };
+    }]);
+</script>
+</html>

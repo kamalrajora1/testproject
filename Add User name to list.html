@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Add usr name to list</title>
+</head>
+<body>
+    <div ng-controller="SimpleController">
+        <h2>Enter your's ditails</h2>
+        <table>
+            <tr>
+                <td>
+                    Name :
+                </td>
+                <td>
+                    <input type="text" ng-model="enteredName"/>
+                </td>
+            </tr>
+        </table>
+        <input type="button" ng-click="addName()" value="Add"/>
+        <h1></h1>
+        <ul>
+            <li ng-repeat="obj in names">
+                {{obj}} -
+                <a href="" ng-click="removeName(obj)" > Remove</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="JS/angular.min.js"></script>
+<script type="text/javascript">
+    var demoApp = angular.module("demoApp", []);
+    demoApp.controller('SimpleController', function($scope){
+        $scope.names = ['Larry', 'Curly', 'Moe'];
+
+        $scope.addName = function() {
+            $scope.names.push($scope.enteredName);
+            $scope.enteredName = '';
+        };
+
+        $scope.removeName = function(name) {
+            var i = $scope.names.indexOf(name);
+            $scope.names.splice(i, 1);
+        };
+    });
+
+</script>
+</html>

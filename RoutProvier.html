@@ -1,0 +1,28 @@
+<html ng-app="demoApp">
+<head>
+    <title>Routing</title>
+</head>
+<body>
+    <H1>Routing page...</H1>
+    <ul>
+        <li>
+            <a href="#/welcome" >Welcome page</a>
+        </li>
+        <li>
+            <a href="#/about">About</a>
+        </li>
+    </ul>
+    <div ng-view=""></div>
+</body>
+<script type="text/javascript" src="JS/angular.min.js"></script>
+<script type="text/javascript" src="JS/angular-route.min.js"></script>
+<script type="text/javascript">
+    var demoApp = angular.module("demoApp", ['ngRoute']);
+    demoApp.config(function($routeProvider){
+        //setup route
+        $routeProvider
+                .when('/welcome', {template : '<H1>Welcome user</H1>'})
+                .when('/about', {template : '<h1>About page</h1>'});
+    });
+</script>
+</html>

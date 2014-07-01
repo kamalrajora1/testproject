@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>ng-repeat N ng-init Demo</title>
+</head>
+<body ng-app = "">
+<h1>Welcome to Angular Demo</h1>
+Name : <input type = "text" ng-model = "name" />
+{{ name }} <br>
+<div ng-init="list = [{name : 'Kamal', city: 'CHD'},{ name: 'Kumar', city:'GDB'}, {name: 'Rajora', city: 'ABC'}]">
+    <h3>Used Ng-repeat and init to get data in div</h3>
+    <ul>
+        <li ng-repeat = "N in list | filter : name | orderBy : 'city'">
+           {{ N.name | uppercase }} -- {{ N.city}}
+        </li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript" src="JS/angular.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</html>

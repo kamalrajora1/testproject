@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html  ng-app="demoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Data Handeling</title>
+</head>
+<body>
+Enter Name : <input type="text" ng-model="name"/>{{name}}
+<div ng-controller="SimpleController">
+    <ul>
+        <li ng-repeat="obj in list">
+            {{ obj.name }} --{{ obj.city }}
+        </li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript" src="JS/angular.min.js"></script>
+<script type="text/javascript">
+    var demoApp = angular.module('demoApp', []);
+    demoApp.controller('SimpleController', function($scope, $http ){
+        $http.get('GetData.json').success(function(data) {
+            $scope.list = data;
+
+        });
+    });
+</script>
+</html>

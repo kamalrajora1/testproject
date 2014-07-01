@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Caching JSON data in a service</title>
+</head>
+<body>
+    <h1>Caching JSON data in a service</h1>
+    <table>
+        <tr>
+            <th><a href="#/home"> Home </a> </th>
+            <th><a href="#/about">About</a> </th>
+        </tr>
+    </table>
+    <div ng-view=""></div>
+</body>
+<script type="text/javascript" src="JS/angular.min.js"></script>
+<script type="text/javascript" src="JS/angular-route.min.js"></script>
+<script type="text/javascript">
+    var demoApp =  angular.module("demoApp", ['ngRoute']);
+    demoApp.config(function($routeProvider){
+        $routeProvider
+                .when('/home',
+                    {
+                    templateUrl : 'WelcomePage.html',
+                    controller : 'SimpleController'
+                    }
+                )
+                .when('/about',
+                {
+                    templateUrl : 'aboutPage.html',
+                    controller : 'aboutController'
+                }
+                )
+                .otherwise({
+                   template : '<h1>Default page....</h1>'
+                });
+    });
+    demoApp.factory('SimpleFactory', function($http){
+
+        var cachedData;
+
+        function getData(callback){
+            if(cachedData) {
+                callback(cachedData);
+            } else {
+                $http.get('GetData.json').success(function(data){
+                    cachedData = data;
+                    callback(data);
+                });
+            }
+        }
+
+        return {
+            datalist : getData
+        };
+    });
+
+//    demoApp.factory('SimpleFactory', function($http){
+//        return {
+//            datalist : function(callback){
+//                $http.get('GetData.json').success(callback);
+//            }
+//        };
+//    });
+    demoApp.controller('SimpleController', function($scope, SimpleFactory){
+        SimpleFactory.datalist(function(SimpleFactory){
+            $scope.list = SimpleFactory;
+        })
+    });
+    demoApp.controller('aboutController', function($scope){
+        $scope.about = "Name : Kamal, ID : 204";
+    });
+</script>
+</html>
